@@ -1,0 +1,287 @@
+.or-page {
+  min-height: calc(100vh - 64px);
+  background: #f1f5f9;
+  padding: 40px 20px;
+}
+
+.or-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+  display: flex;
+  min-height: 600px;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.or-sidebar {
+  width: 300px;
+  background: #1e293b;
+  color: white;
+  padding: 40px 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.or-sidebar h2 {
+  font-size: 22px;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.or-sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: auto;
+}
+
+.or-sidebar nav button {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  padding: 14px 18px;
+  text-align: left;
+  border-radius: 12px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 500;
+}
+
+.or-sidebar nav button:hover {
+  background: rgba(255,255,255,0.05);
+  color: white;
+}
+
+.or-sidebar nav button.active {
+  background: white;
+  color: black;
+}
+
+.or-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 40px;
+}
+
+.stat-card {
+  background: rgba(255,255,255,0.08);
+  padding: 16px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.stat-card .label {
+  display: block;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #94a3b8;
+  margin-bottom: 4px;
+}
+
+.stat-card .value {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* Content Area */
+.or-content {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+.content-header {
+  margin-bottom: 32px;
+}
+
+.content-header h3 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.content-header p {
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* Requests List */
+.or-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.request-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s;
+}
+
+.request-card:hover {
+  background: #f8fafc;
+  transform: translateX(5px);
+}
+
+.rider-profile {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.rider-profile .avatar {
+  font-size: 32px;
+  background: #f1f5f9;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+}
+
+.rider-profile h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.rider-profile .rating {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.route-details p {
+  margin: 0;
+  font-size: 13px;
+  color: #475569;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+.actions button {
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  border: none;
+}
+
+.reject-btn {
+  background: #fef2f2;
+  color: #ef4444;
+}
+
+.accept-btn {
+  background: black;
+  color: white;
+}
+
+/* Settings Form */
+.settings-form {
+  max-width: 450px;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #f1f5f9;
+  width: fit-content;
+  padding: 6px;
+  border-radius: 10px;
+}
+
+.counter button {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: none;
+  background: white;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.counter span {
+  font-weight: 700;
+  min-width: 20px;
+  text-align: center;
+}
+
+.settings-form input[type="number"],
+.settings-form input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.checkbox-grid label {
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.save-btn {
+  width: 100%;
+  padding: 14px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.or-empty {
+  text-align: center;
+  padding: 80px 0;
+  color: #64748b;
+}
+
+.or-empty .icon {
+  font-size: 48px;
+  display: block;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 900px) {
+  .or-container {
+    flex-direction: column;
+  }
+  .or-sidebar {
+    width: 100%;
+  }
+}
