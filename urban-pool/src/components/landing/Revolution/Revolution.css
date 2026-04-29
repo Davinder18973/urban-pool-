@@ -1,0 +1,123 @@
+.revolution-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+
+.revolution-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.revolution-header p {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ecfdf5;
+  color: #10b981;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.revolution-header h2 {
+  font-size: 42px;
+  font-weight: 800;
+  color: #111827;
+  margin: 0;
+}
+
+.revolution-header h2 span {
+  color: #10b981;
+}
+
+.revolution-subtitle {
+  font-size: 18px;
+  color: #6b7280;
+  margin-top: 16px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.revolution-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.revolution-card {
+  position: relative;
+  background: white;
+  border: 1px solid #f3f4f6;
+  border-radius: 20px;
+  padding: 40px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.revolution-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.06);
+  border-color: transparent;
+}
+
+.rev-icon-top {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.revolution-card h3 {
+  font-size: 24px;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 2;
+}
+
+.revolution-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #4b5563;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* The giant floating watermark */
+.rev-icon-watermark {
+  position: absolute;
+  bottom: -40px;
+  right: -20px;
+  z-index: 1;
+  opacity: 0.03; /* Very faint initially */
+  transform: scale(0.85); /* Slightly shrunken */
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+/* THE HOVER EFFECT */
+.revolution-card:hover .rev-icon-watermark {
+  opacity: 0.12; /* Fades in to be more visible */
+  transform: scale(1.15) translate(-10px, -10px); /* Grows and floats inwards */
+}
+
+@media (max-width: 768px) {
+  .revolution-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
